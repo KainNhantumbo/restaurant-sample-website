@@ -9,7 +9,8 @@ Make sure you have installed **Node.js (v18.17.0 or later recommended) which als
 In the project directory, you can run in terminal:
 
 ```bash
- npm run dev
+npm install --save
+npm run dev
 ```
 
 Runs the app in the development mode and the server will reload when you make changes to the source code.

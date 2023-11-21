@@ -1,5 +1,4 @@
 import './styles/index.css'
-import 'rc-dropdown/assets/index.css';
 import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 
@@ -9,6 +8,7 @@ import Loader from './components/Loader';
 import { store } from './state/store';
 import { Provider } from 'react-redux';
 
+// eslint-disable-next-line react-refresh/only-export-components
 const AppRouter = lazy(() => import('./AppRouter'));
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -45,21 +45,18 @@ export default function ThemeContext({ children }: Props) {
   const changeColorScheme = ({ mode, scheme }: ColorScheme): void => {
     switch (mode) {
       case 'auto':
-        window
-          .matchMedia('(prefers-color-scheme: dark)')
-          .addEventListener('change', (e) => {
-            if (e.matches) {
-              setDarkColorScheme({ mode, scheme: 'dark' });
-            } else {
-              setLightColorScheme({ mode, scheme: 'light' });
-            }
-          });
-
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          setDarkColorScheme({ mode, scheme: 'dark' });
-        } else {
+        // eslint-disable-next-line no-case-declarations
+        const target = window.matchMedia('(prefers-color-scheme: dark)');
+        target.addEventListener('change', (e) => {
+          if (e.matches) return setDarkColorScheme({ mode, scheme: 'dark' });
           setLightColorScheme({ mode, scheme: 'light' });
+        });
+
+        if (target.matches) {
+          setDarkColorScheme({ mode, scheme: 'dark' });
+          break;
         }
+        setLightColorScheme({ mode, scheme: 'light' });
         break;
       case 'manual':
         if (scheme === 'dark') {

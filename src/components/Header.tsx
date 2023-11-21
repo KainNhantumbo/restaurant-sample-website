@@ -1,23 +1,15 @@
-import {
-  Link,
-  useNavigate,
-  NavigateFunction,
-  useLocation,
-  Location
-} from 'react-router-dom';
+import clsx from 'clsx';
 import { useState, useEffect } from 'react';
-import logoImage from '@/assets/boards-logo.png';
-import { metadata, nav_anchors } from '../shared/data';
 import { m as motion, AnimatePresence } from 'framer-motion';
 import { _header as Container } from '../styles/modules/_header';
-import { RiMenuLine, RiCloseLine, RiArrowRightLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+import { RiCloseLine, RiMenu2Line } from 'react-icons/ri';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/state/store';
+import { metadata } from '@/shared/data';
 
 export default function Header() {
   const [isMenu, setIsMenu] = useState<boolean>(false);
-  const navigate= useNavigate();
-  const location = useLocation();
   const windowInnerSize = useSelector(
     (state: RootState) => state.innerWindowSize
   );
@@ -31,19 +23,6 @@ export default function Header() {
   return (
     <Container>
       <div className='wrapper'>
-        <div className='logo'>
-          <Link to={'/'}>
-            <img
-              loading='lazy'
-              decoding='async'
-              alt={`${metadata.appName} Logo`}
-              src={logoImage}
-            />
-          </Link>
-          <h3 onClick={() => navigate('/')}>
-            <span>{metadata.appName}</span>
-          </h3>
-        </div>
         <AnimatePresence>
           {isMenu && (
             <motion.nav
@@ -56,46 +35,44 @@ export default function Header() {
                 transition: { duration: 0.25 }
               }}
               style={{ display: isMenu ? 'flex' : 'none' }}>
-              <section className='navigation-anchors-container'>
-                {nav_anchors.map((item, index) => (
-                  <a
-                    key={index.toString()}
-                    href={item.url}
-                    className={
-                      location.pathname.includes(item.alias) ? 'active' : ''
-                    }>
-                    <motion.span whileHover={{ scale: 1.1 }}>
-                      {item.name}
-                    </motion.span>
-                  </a>
-                ))}
-              </section>
+              <div className='right-corner-container'>
+                <Link to={'/'}>
+                  <span>Overview</span>
+                </Link>
+                <Link to={'/'}>
+                  <span>Health & Safety</span>
+                </Link>
+              </div>
 
               <div className='left-corner-container'>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.9 }}
-                  title='Go to workspace'
-                  className='user-account'
-                  onClick={() => navigate(`/boards`)}>
-                  <span>Go to Workspace</span>
-                  <RiArrowRightLine />
-                </motion.button>
+                <Link to={'/'}>
+                  <span>Services</span>
+                </Link>
+                <Link to={'/'}>
+                  <span>Offers</span>
+                </Link>
+                <Link to={'/'}>
+                  <span>Menu</span>
+                </Link>
               </div>
             </motion.nav>
           )}
         </AnimatePresence>
 
+        <div className='brand-container'>
+          <h1>
+            <Link to={'/'}>
+              <span>{metadata.appName}</span>
+            </Link>
+          </h1>
+        </div>
+
         <motion.button
           whileTap={{ scale: 0.8 }}
           title={`${isMenu ? 'Close menu drawer' : 'Open menu drawer'}`}
-          aria-placeholder={`${
-            isMenu ? 'Close menu drawer' : 'Open menu drawer'
-          }`}
-          aria-label={`${isMenu ? 'Close menu drawer' : 'Open menu drawer'}`}
-          className={`toggle-btn ${isMenu ? 'toggle-btn_active' : ''}`}
+          className={clsx('toggle-btn', { 'toggle-btn_active': isMenu })}
           onClick={toggleMenu}>
-          {!isMenu ? <RiMenuLine /> : <RiCloseLine />}
+          {!isMenu ? <RiMenu2Line /> : <RiCloseLine />}
         </motion.button>
       </div>
     </Container>

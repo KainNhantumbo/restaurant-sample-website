@@ -1,18 +1,40 @@
 import { Link } from 'react-router-dom';
-import { metadata, footerAnchors } from '../shared/data';
+import { footerAnchors, metadata } from '../shared/data';
 import { _footer as Container } from '../styles/modules/_footer';
 
 export default function Footer() {
   return (
     <Container>
-      <nav>
-        {footerAnchors.map((item, index) => (
-          <Link key={index.toString()} to={item.anchor}>
-            <span>{item.name}</span>
-          </Link>
-        ))}
-      </nav>
-      <p className='copyright-sentence'>&copy; {metadata.copyright}</p>
+      <h1>Let's connect with us</h1>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <input type='email' />
+        <button type='submit'>
+          <span>Subscribe now</span>
+        </button>
+      </form>
+
+      <section className='root-container'>
+        <div className='brand-container'>
+          <h2>iMeat</h2>
+          <p>
+            Our restaurant is a place where everyone can feel the pleasure of
+            having a breathe of taste
+          </p>
+        </div>
+        <nav>
+          {footerAnchors.map((items, index) => (
+            <section key={index} className='columns-container-wrapper'>
+              {items.map((element, index) => (
+                <Link key={index.toString()} to={element.url}>
+                  <span>{element.name}</span>
+                </Link>
+              ))}
+            </section>
+          ))}
+        </nav>
+      </section>
+      
+      <p className='copyright-sentence'>{metadata.copyright}</p>
     </Container>
   );
 }

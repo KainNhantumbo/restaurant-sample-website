@@ -27,7 +27,7 @@ export const BaseButton = css`
   width: fit-content;
   cursor: pointer;
   background: rgb(${({ theme }) => theme.primary_c});
-  color: rgb(${({ theme }) => theme.font});
+  color: rgb(${({ theme }) => theme.white});
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -46,7 +46,6 @@ export const BaseButton = css`
   span {
     background: transparent;
     font-weight: 500;
-    color: rgb(${({ theme }) => theme.white});
     pointer-events: none;
   }
 `;

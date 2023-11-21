@@ -1,5 +1,3 @@
-import { Option } from '@/types';
-import { IconType } from 'react-icons';
 import Package from '../../package.json';
 import { RiGithubLine, RiMailCheckLine, RiStackLine } from 'react-icons/ri';
 
@@ -12,8 +10,7 @@ export const metadata = {
   websiteName: Package.website_name,
   tags: Package.keywords.join(' '),
   websiteUrl: Package.url,
-  description: '',
-  copyright: `${new Date().getFullYear()} ${Package.metadata.name}`,
+  copyright: Package.metadata.copyright_notice,
   contacts: [
     {
       name: 'Github',
@@ -33,33 +30,27 @@ export const metadata = {
   ]
 };
 
-export const nav_anchors = [
-  { name: 'Overview', url: '/', alias: 'overview' },
-  { name: 'Features', url: '#features', alias: 'features' }
-];
-
-export const app_features: {
-  icon: IconType;
-  title: string;
-  content: string;
-}[] = [];
-
-export const footerAnchors = [
-  { name: 'Privacy Policy', anchor: '/docs/privacy-policy' },
-  { name: 'Contact', anchor: '/docs/contact' },
-  { name: 'FAQ', anchor: '/docs/faq' },
-  { name: 'Donate', anchor: metadata.author.donate },
-  { name: 'Github', anchor: metadata.repository },
-  { name: 'Portfolio', anchor: metadata.author.portfolio }
-].sort((a, b) => (a.name > b.name ? 1 : -1));
-
-export const sortOptions: Option[] = [
-  { value: 'title', label: 'Title [A-Z]' },
-  { value: '-title', label: 'Title [Z-A]' },
-  { value: '-createdAt', label: 'Date Created' },
-  { value: 'createdAt', label: 'Date Created [Inverted]' },
-  { value: '-updatedAt', label: 'Date Updated' },
-  { value: 'updatedAt', label: 'Date Updated [Inverted]' }
+export const footerAnchors: Array<Array<{ name: string; url: string }>> = [
+  [
+    { name: 'Contact', url: '/' },
+    { name: 'About Us', url: '/' },
+    { name: 'Portfolio', url: metadata.author.portfolio }
+  ],
+  [
+    { name: 'Compare Plans', url: '/' },
+    { name: 'Resources', url: '/' },
+    { name: 'Healthy and Safety', url: '/' }
+  ],
+  [
+    { name: 'Book a Service', url: '/' },
+    { name: 'Terms of Service', url: '/' },
+    { name: 'Privacy Policy', url: '/docs/privacy-policy' }
+  ],
+  [
+    { name: 'Facebook', url: '/' },
+    { name: 'Twitter', url: '/' },
+    { name: 'Instagram', url: '/' }
+  ]
 ];
 
 export const colorSchemeOptions = [

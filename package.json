@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "description": "vite app template",
+  "name": "iMeat-Restaurant",
+  "description": "Restaurant Demo App",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -19,8 +19,8 @@
     "donate": "https://www.buymeacoffee.com/nhantumbokU"
   },
   "metadata": {
-    "name": "",
-    "copyright_notice": "© 2023 [app name] | All Rights Reserved."
+    "name": "iMeat",
+    "copyright_notice": "© 2023 iMeat Restaurant | All Rights Reserved."
   },
   "keywords": [],
   "engines": {

@@ -37,6 +37,7 @@ export const _cookies = styled.div`
       gap: 5px;
       font-weight: 600;
       align-items: center;
+      text-transform: capitalize;
     }
 
     .options-container {
@@ -46,7 +47,7 @@ export const _cookies = styled.div`
 
       h2 {
         font-weight: 600;
-        line-height: 1.6rem;
+        line-height: 1.8rem;
       }
     }
 
@@ -74,7 +75,7 @@ export const _cookies = styled.div`
       justify-content: flex-end;
       align-items: center;
       padding: 12px;
-      border-top: 2px solid rgba(${({ theme }) => theme.font}, 0.9);
+      border-top: 1px solid rgba(${({ theme }) => theme.font}, 0.9);
       gap: 8px;
 
       a {

@@ -10,11 +10,12 @@ export const _error = styled.main`
   display: flex;
   flex-direction: column;
   gap: 50px;
-
+  
   .content-container {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
+    
     h1 {
       font-weight: 600;
       font-size: 4.4rem;
@@ -23,14 +24,12 @@ export const _error = styled.main`
     }
 
     h2 {
-      font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       line-height: 2.8rem;
     }
 
     p {
-      font-weight: 500;
       text-transform: uppercase;
       line-height: 1.8rem;
     }
@@ -38,7 +37,6 @@ export const _error = styled.main`
     button {
       ${BaseButton}
       margin-top: 20px;
-      font-weight: 500;
     }
   }
 

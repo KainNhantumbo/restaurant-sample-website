@@ -26,7 +26,7 @@ export const BaseButton = css`
   padding: 7px 10px;
   width: fit-content;
   cursor: pointer;
-  background: rgba(${({ theme }) => theme.primary_a}, 0.5);
+  background: rgb(${({ theme }) => theme.primary_c});
   color: rgb(${({ theme }) => theme.font});
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -37,16 +37,16 @@ export const BaseButton = css`
   :hover {
     background: rgba(${({ theme }) => theme.primary_a}, 0.9);
     border: 1px solid rgba(${({ theme }) => theme.font}, 0.3);
-  }
-  :disabled {
-    box-shadow: none;
-    background: rgba(${({ theme }) => theme.primary_a}, 0.4);
+
     span {
-      color: rgb(${({ theme }) => theme.foreground});
+      color: rgb(${({ theme }) => theme.white});
     }
   }
+
   span {
+    background: transparent;
     font-weight: 500;
+    color: rgb(${({ theme }) => theme.white});
     pointer-events: none;
   }
 `;

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { metadata } from '@/shared/data';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, m as motion } from 'framer-motion';
 import { _cookies as Container } from '@/styles/modules/_cookies';
+import { RiCloseLine, RiLoader2Line } from 'react-icons/ri';
 
 export default function Cookies() {
   const [isPopupActive, setIsPopupActive] = useState<boolean>(false);
@@ -45,20 +45,48 @@ export default function Cookies() {
               y: 500,
               transition: { duration: 1.2 }
             }}
-            className='advisor'>
-            <div>
-              <p>
-                We use cookies to grant you a better experience in our site. By
-                using {metadata.appName}, you accept our {'  '}
-                <Link to='/docs/privacy-policy'>
-                  <strong>privacy policy</strong>
-                </Link>
-                .
-              </p>
-              <button onClick={advisorController}>
-                <span>Accept and close</span>
+            className='main-container'>
+            <section className='modal-container'>
+              <h1>
+                <RiLoader2Line />
+                <span>Your privacy matters</span>
+              </h1>
+
+              <button className='close-button' onClick={advisorController}>
+                <RiCloseLine />
               </button>
-            </div>
+
+              <div className='options-container'>
+                <div>
+                  <h2>Color Schemes</h2>
+                  <p>
+                    We store a cookie for seamless colors scheme preferences.
+                  </p>
+                </div>
+                <div>
+                  <h2>Purpose</h2>
+                  <p>
+                    Cookies enhance your experience and remember preferencies.
+                  </p>
+                </div>
+                <div>
+                  <h2>Control</h2>
+                  <p>
+                    Clear cookies in your browser but may affect your
+                    experience.
+                  </p>
+                </div>
+              </div>
+
+              <div className='actions-container'>
+                <Link to='/docs/privacy-policy'>
+                  <strong>Learn more</strong>
+                </Link>
+                <button className='accept-button' onClick={advisorController}>
+                  <span>Accept and close</span>
+                </button>
+              </div>
+            </section>
           </motion.section>
         </Container>
       )}

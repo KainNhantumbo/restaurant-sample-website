@@ -1,6 +1,55 @@
 import Package from '../../package.json';
 import { RiGithubLine, RiMailCheckLine, RiStackLine } from 'react-icons/ri';
 
+import personImage00 from '../assets/people/people-00.jpg';
+import personImage01 from '../assets/people/people-01.jpg';
+import personImage02 from '../assets/people/people-02.jpg';
+import personImage03 from '../assets/people/people-03.jpg';
+import personImage04 from '../assets/people/people-04.jpg';
+import personImage05 from '../assets/people/people-05.jpg';
+import personImage06 from '../assets/people/people-06.jpg';
+import personImage07 from '../assets/people/people-07.jpg';
+import personImage08 from '../assets/people/people-08.jpg';
+
+export const personPhotos = [
+  personImage00,
+  personImage01,
+  personImage02,
+  personImage03,
+  personImage04,
+  personImage05,
+  personImage06,
+  personImage07,
+  personImage08
+];
+
+export const categoryRoutes: Array<{ name: string; url: string }> = [
+  { name: 'Adana Kebab, Lamb and Beef', url: '/' },
+  { name: 'White Beans okra with Lamb Shank', url: '/' },
+  { name: 'Mondi with Lamb shank Delimia', url: '/' },
+  { name: 'Black Beans with Lamb Shank', url: '/' },
+  { name: 'Stuffed grape leaves with Lamb Shank', url: '/' }
+];
+
+export const recipeTypes: Array<{ type: string; description: string }> = [
+  {
+    type: 'Asiatic',
+    description: 'We also offer a wide range of kebab plates, including lamb.'
+  },
+  {
+    type: 'Japanese',
+    description: 'The perfect complement to any meal and for dessert.'
+  },
+  {
+    type: 'Italian',
+    description: 'At Ottawa Kebab, we strive to create a wram and welcoming.'
+  },
+  {
+    type: 'Chinese',
+    description: 'Our dips and sauces, including smoky baba ganoush.'
+  }
+];
+
 export const metadata = {
   author: Package.author,
   appName: Package.metadata.name,

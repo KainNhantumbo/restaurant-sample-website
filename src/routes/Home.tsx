@@ -1,37 +1,20 @@
 import Layout from '@/components/Layout';
-import { _home as Container } from '@/styles/routes/_home';
 import { Link } from 'react-router-dom';
+import { _home as Container } from '@/styles/routes/_home';
+import sampleImage00 from '../assets/dishes/00.jpg';
+import sampleImage01 from '../assets/dishes/01.jpg';
+import sampleImage02 from '../assets/dishes/02.jpg';
+// import sampleImage03 from '../assets/dishes/03.jpg'
+import sampleImage04 from '../assets/dishes/04.jpg';
+import sampleImage05 from '../assets/dishes/05.jpg';
+import sampleImage06 from '../assets/dishes/06.jpg';
+import sampleImage07 from '../assets/dishes/07.jpg';
+import sampleImage08 from '../assets/dishes/08.jpg';
+import sampleImage09 from '../assets/dishes/09.jpg';
+import sampleImage10 from '../assets/dishes/10.jpg';
+import { categoryRoutes, recipeTypes, personPhotos } from '@/shared/data';
 
 export default function Home() {
-  const usersPhotos = ['', '', '', ''];
-
-  const recipeTypes: Array<{ type: string; description: string }> = [
-    {
-      type: 'Asiatic',
-      description: 'We also offer a wide range of kebab plates, including lamb.'
-    },
-    {
-      type: 'Japanese',
-      description: 'The perfect complement to any meal and for dessert.'
-    },
-    {
-      type: 'Italian',
-      description: 'At Ottawa Kebab, we strive to create a wram and welcoming.'
-    },
-    {
-      type: 'Chinese',
-      description: 'Our dips and sauces, including smoky baba ganoush.'
-    }
-  ];
-
-  const categoryRoutes: Array<{ name: string; url: string }> = [
-    { name: 'Adana Kebab, Lamb and Beef', url: '/' },
-    { name: 'White Beans okra with Lamb Shank', url: '/' },
-    { name: 'Mondi with Lamb shank Delimia', url: '/' },
-    { name: 'Black Beans with Lamb Shank', url: '/' },
-    { name: 'Stuffed grape leaves with Lamb Shank', url: '/' }
-  ];
-
   return (
     <Layout renderHeader renderFooter>
       <Container>
@@ -41,17 +24,17 @@ export default function Home() {
               <h1>Simple and Taste Recipes</h1>
 
               <section className='showcase-container'>
-                <img src='/' alt='plate 00 image' />
+                <img src={sampleImage00} alt='plate 00 image' />
 
                 <div className='principal-dish-container'>
                   <div>
                     <p>01 - Explore Dishes</p>
                   </div>
                   <div>
-                    {usersPhotos.map((image, index) => (
+                    {personPhotos.map((photo, index) => (
                       <img
                         key={index}
-                        src={image}
+                        src={photo}
                         alt={`User ${index + 1} photo`}
                         loading='lazy'
                         decoding='async'
@@ -67,7 +50,7 @@ export default function Home() {
                   </div>
                   <div>
                     <img
-                      src={''}
+                      src={sampleImage01}
                       alt={`plate 01 image`}
                       loading='lazy'
                       decoding='async'
@@ -88,7 +71,7 @@ export default function Home() {
                 <section>
                   <div>
                     <img
-                      src={''}
+                      src={sampleImage02}
                       alt={`plate 02 image`}
                       loading='lazy'
                       decoding='async'
@@ -105,7 +88,7 @@ export default function Home() {
                 </section>
               </div>
               <img
-                src={''}
+                src={sampleImage04}
                 alt={`plate 04 image`}
                 loading='lazy'
                 decoding='async'
@@ -121,7 +104,7 @@ export default function Home() {
               </div>
               <div className='routes-wrapper'>
                 <img
-                  src={''}
+                  src={sampleImage05}
                   alt={`plate 05 image`}
                   loading='lazy'
                   decoding='async'
@@ -134,7 +117,7 @@ export default function Home() {
                   ))}
                 </div>
                 <img
-                  src={''}
+                  src={sampleImage06}
                   alt={`plate 06 image`}
                   loading='lazy'
                   decoding='async'
@@ -146,7 +129,7 @@ export default function Home() {
                   to you to customize catering menu to suit your specific needs.
                 </p>
                 <img
-                  src={''}
+                  src={sampleImage07}
                   alt={`plate 07 image`}
                   loading='lazy'
                   decoding='async'
@@ -179,7 +162,7 @@ export default function Home() {
             <section className='dishes-wrapper'>
               <div className='dish-container'>
                 <img
-                  src={''}
+                  src={sampleImage08}
                   alt={`plate 08 image`}
                   loading='lazy'
                   decoding='async'
@@ -192,14 +175,14 @@ export default function Home() {
                 </div>
               </div>
               <img
-                src={''}
+                src={sampleImage10}
                 alt={`plate 10 image`}
                 loading='lazy'
                 decoding='async'
               />
               <div className='dish-container'>
                 <img
-                  src={''}
+                  src={sampleImage09}
                   alt={`plate 09 image`}
                   loading='lazy'
                   decoding='async'

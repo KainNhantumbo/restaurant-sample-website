@@ -4,7 +4,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "url": "",
+  "url": "imeat-restaurant-demo.vercel.app",
   "website_name": "",
   "browserslist": [
     "defaults",
@@ -27,11 +27,8 @@
     "node": ">=18.17.0",
     "npm": ">=9.6.7"
   },
-  "license": {
-    "name": "Apache License Version 2.0",
-    "url": " http://www.apache.org/licenses"
-  },
-  "repository": "https://github.com/KainNhantumbo/vite-app-template",
+  "license": "Apache License Version 2.0",
+  "repository": "https://github.com/KainNhantumbo/restaurant-sample-website",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

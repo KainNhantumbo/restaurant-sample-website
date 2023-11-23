@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import { footerAnchors, metadata } from '../shared/data';
-import { _footer as Container } from '../styles/modules/_footer';
 
 export default function Footer() {
   return (
-    <Container>
-      <h1>Let's connect with us</h1>
+    <footer className='group flex flex-col gap-2 w-[100%] p-3 bg-primary_b '>
+      <h1 className=''>Let's connect with us</h1>
       <form onSubmit={(e) => e.preventDefault()}>
         <input type='email' />
         <button type='submit'>
@@ -33,8 +32,8 @@ export default function Footer() {
           ))}
         </nav>
       </section>
-      
+
       <p className='copyright-sentence'>{metadata.copyright}</p>
-    </Container>
+    </footer>
   );
 }

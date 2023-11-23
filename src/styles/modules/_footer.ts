@@ -15,13 +15,6 @@ export const _footer = styled.footer`
   padding: 20px;
   justify-content: space-between;
 
-  * {
-    ::selection {
-      background: rgb(${({ theme }) => theme.background});
-      color: rgb(${({ theme }) => theme.primary_a});
-    }
-  }
-
   nav {
     width: fit-content;
     display: flex;

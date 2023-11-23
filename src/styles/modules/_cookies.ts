@@ -12,7 +12,7 @@ export const _cookies = styled.div`
   place-content: center;
   place-items: center;
   background: rgba(${({ theme }) => theme.foreground}, 0.2);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
 
   .modal-container {
     width: 100%;
@@ -79,9 +79,13 @@ export const _cookies = styled.div`
       gap: 8px;
 
       a {
-        font-weight: 600;
+        font-weight: 500;
         text-decoration: underline;
         text-underline-offset: 3px;
+        :hover {
+          color: rgb(${({ theme }) => theme.primary_a});
+          transition: all 200ms ease;
+        }
       }
 
       .accept-button {

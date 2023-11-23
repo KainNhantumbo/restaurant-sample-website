@@ -10,12 +10,22 @@ export const _error = styled.main`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  
+
+  background-color: rgb('255, 112, 91');
+  background-color: rgb('255, 206, 8');
+  background-color: rgb('25, 25, 28');
+  background-color: rgb('39, 40, 45');
+  background-color: rgb('27, 27, 31');
+  background-color: rgb('240, 240,240');
+  background-color: rgb('25, 25, 28');
+  background-color: rgb('253, 56, 79');
+  background-color: #fff;
+
   .content-container {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 500;
-    
+
     h1 {
       font-weight: 600;
       font-size: 4.4rem;

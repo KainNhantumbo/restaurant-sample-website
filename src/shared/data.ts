@@ -9,7 +9,6 @@ import personImage04 from '../assets/people/people-04.jpg';
 import personImage05 from '../assets/people/people-05.jpg';
 import personImage06 from '../assets/people/people-06.jpg';
 import personImage07 from '../assets/people/people-07.jpg';
-import personImage08 from '../assets/people/people-08.jpg';
 
 export const personPhotos = [
   personImage00,
@@ -19,8 +18,7 @@ export const personPhotos = [
   personImage04,
   personImage05,
   personImage06,
-  personImage07,
-  personImage08
+  personImage07
 ];
 
 export const categoryRoutes: Array<{ name: string; url: string }> = [

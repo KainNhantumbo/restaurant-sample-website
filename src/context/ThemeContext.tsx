@@ -6,7 +6,6 @@ import {
   useEffect
 } from 'react';
 import { Theme, ColorScheme } from '../types';
-import { GlobalStyles } from '../styles/globals';
 import { ThemeProvider } from 'styled-components';
 import { dark_default, light_default } from '../styles/themes';
 
@@ -90,7 +89,6 @@ export default function ThemeContext({ children }: Props) {
 
   return (
     <ThemeProvider theme={currentTheme}>
-      <GlobalStyles />
       <context.Provider value={{ colorScheme, changeColorScheme }}>
         {children}
       </context.Provider>

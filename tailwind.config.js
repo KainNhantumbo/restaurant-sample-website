@@ -5,22 +5,27 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      screens: {
+        mobile: '420px',
+        'mobile-x': '480px',
+        
+      },
       colors: {
         transparent: 'transparent',
-        error: { DEFAULT: '#BE123C', light: '#BE123C', dark: '#BE123C' },
-        font: { DEFAULT: '#CBD0D0', light: '#CBD0D0', dark: '#CBD0D0' },
+        error: { DEFAULT: '#FD384F', light: '#FD384F', dark: '#FD384F' },
+        font: { DEFAULT: '#5F6368', light: '#5F6368', dark: '#C6C5CD' },
         black: { DEFAULT: '#101010', light: '#101010', dark: '#1B1E20' },
         white: { DEFAULT: '#fff', light: '#fff', dark: '#FCFCFC' },
         primary_a: { DEFAULT: '#E3C49A', light: '#E3C49A', dark: '#E3C49A' },
         primary_b: { DEFAULT: '#F7AB36', light: '#F7AB36', dark: '#F7AB36' },
         primary_c: { DEFAULT: '#274637', light: '#274637', dark: '#274637' },
-        background: { DEFAULT: '#F6F9F7', light: '#F6F9F7', dark: '#1B1E20' },
-        foreground: { DEFAULT: '#FFFFFF', light: '#FFFFFF', dark: '#33373A' }
+        background: { DEFAULT: '#F6F9F7', light: '#F6F9F7', dark: '#1B1B1F' },
+        foreground: { DEFAULT: '#FFFFFF', light: '#FFFFFF', dark: '#27282D' }
       }
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      'sans-serif': ['Zilla_Slab', 'sans-serif']
+      sans: ['Raleway', 'sans-serif'],
+      'sans-serif': ['Cinzel','Bitter', 'sans-serif']
     }
   },
   plugins: []

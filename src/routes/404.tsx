@@ -16,7 +16,9 @@ export default function NotFoundError() {
         <h1>404</h1>
         <h2>Oops! Lost in {metadata.appName}?</h2>
         <p>The page you were looking for does not exist</p>
-        <button onClick={() => navigate('/', { replace: true })}>
+        <button
+          onClick={() => navigate('/', { replace: true })}
+          className='base-button mt-5'>
           Get back!
         </button>
       </section>

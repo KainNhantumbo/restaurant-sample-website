@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { BaseButton, StyledCornerButton } from '../defaults';
 
 export const _cookies = styled.div`
   width: 100%;
@@ -55,18 +54,6 @@ export const _cookies = styled.div`
       flex-direction: column;
     }
 
-    .close-button {
-      ${StyledCornerButton}
-      border: none;
-      padding: 0;
-      position: absolute;
-      top: 12px;
-      right: 12px;
-
-      :hover {
-        color: rgb(${({ theme }) => theme.error});
-      }
-    }
 
     .actions-container {
       width: 100%;
@@ -88,9 +75,7 @@ export const _cookies = styled.div`
         }
       }
 
-      .accept-button {
-        ${BaseButton}
-      }
+     
     }
   }
 `;

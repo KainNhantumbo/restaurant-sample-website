@@ -52,7 +52,7 @@ export default function Cookies() {
                 <span>Your privacy matters</span>
               </h1>
 
-              <button className='close-button' onClick={advisorController}>
+              <button className='base-corner-button border-none p-0 absolute top-3 right-3 hover:text-error-light' onClick={advisorController}>
                 <RiCloseLine />
               </button>
 
@@ -82,7 +82,7 @@ export default function Cookies() {
                 <Link to='/docs/privacy-policy'>
                   <strong>Learn more</strong>
                 </Link>
-                <button className='accept-button' onClick={advisorController}>
+                <button className='base-button' onClick={advisorController}>
                   <span>Accept and close</span>
                 </button>
               </div>

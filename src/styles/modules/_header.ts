@@ -1,72 +1,7 @@
 import styled from 'styled-components';
-import { BaseButton, StyledCornerButton } from '../defaults';
 
 export const _header = styled.header`
-  width: 100%;
-  height: 50px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(5px);
-  background:transparent;
-  padding: 12px 8px;
-  font-weight: 500;
-  font-size: 0.9rem;
-  z-index: 20000;
-
-  .wrapper {
-    margin: 0 auto;
-    @media screen and (min-width: 1200px) {
-      max-width: 1200px;
-      left: calc(50% - 600px);
-
-      .logo {
-        left: calc(50% - 600px);
-      }
-    }
-  }
-
-  .logo {
-    position: absolute;
-    top: calc(50% - 14px);
-    left: 30px;
-    cursor: pointer;
-    margin-right: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    user-select: none;
-    a {
-      position: relative;
-    }
-
-    img {
-      width: 100%;
-      max-width: 20px;
-      object-fit: cover;
-    }
-
-    @media screen and (max-width: 600px) {
-      left: 30px;
-    }
-  }
-
   nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    top: -8px;
-    left: 180px;
-    gap: 20px;
-    font-size: 0.9rem;
-
-    .active {
-      color: rgb(${({ theme }) => theme.primary_a});
-    }
 
     .navigation-anchors-container {
       display: flex;
@@ -153,7 +88,7 @@ export const _header = styled.header`
           }
         }
         button {
-          ${BaseButton}
+
           background: rgb(${({ theme }) => theme.primary_b});
         }
       }
@@ -245,7 +180,7 @@ export const _header = styled.header`
   }
 
   .toggle-btn {
-    ${StyledCornerButton}
+
     position: fixed;
     top: 9px;
     right: 20px;

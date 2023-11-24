@@ -24,6 +24,10 @@
     @apply px-[7px] py-[10px] cursor-pointer whitespace-nowrap text-ellipsis text-font overflow-hidden outline-none;
   }
 
+  .base-image {
+    @apply rounded-[50%] object-cover w-[100%] h-[100%];
+  }
+
   .base-button {
     all: unset;
     @apply w-fit cursor-pointer px-[7px] py-[10px] rounded-full bg-primary_c text-font-light dark:text-font-dark whitespace-nowrap text-ellipsis overflow-hidden border-solid border-[1px] border-opacity-80 border-font-light dark:border-font-dark text-center hover:bg-primary_a hover:border-opacity-20;

@@ -38,7 +38,7 @@ export default function Footer() {
                 <Link
                   key={index.toString()}
                   to={element.url}
-                  className='hover:text-primary_b text-center sm:text-left dark:hover:text-primary_b-dark transition-colors'>
+                  className='hover:text-primary_b hover:underline hover:underline-offset-2 text-center sm:text-left dark:hover:text-primary_b-dark transition-colors'>
                   <span>{element.name}</span>
                 </Link>
               ))}

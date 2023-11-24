@@ -7,8 +7,7 @@ export default {
     extend: {
       screens: {
         mobile: '420px',
-        'mobile-x': '480px',
-        
+        'mobile-x': '480px'
       },
       colors: {
         transparent: 'transparent',
@@ -25,7 +24,7 @@ export default {
     },
     fontFamily: {
       sans: ['Raleway', 'sans-serif'],
-      'sans-serif': ['Cinzel','Bitter', 'sans-serif']
+      'sans-serif': ['Cinzel', 'Bitter', 'sans-serif']
     }
   },
   plugins: []

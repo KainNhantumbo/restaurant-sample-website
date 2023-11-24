@@ -18,7 +18,7 @@ export default function Loader() {
   const theme = useTheme();
   return (
     <section style={{ ...styles }}>
-      <h3>Backing your boards...</h3>
+      <h3>Backing your dishes...</h3>
       <BeatLoader
         color={`rgb(${theme.primary_a})`}
         cssOverride={{

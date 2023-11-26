@@ -9,7 +9,7 @@ const innerWindowSizeSlice = createSlice({
   initialState,
   reducers: {
     updateSizes: (state, action: PayloadAction<InnerWindowSize>) => {
-      state = { width: action.payload.width, height: action.payload.height };
+      return { width: action.payload.width, height: action.payload.height };
     }
   }
 });

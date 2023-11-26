@@ -9,7 +9,6 @@ export default function AppContext({ children }: Props) {
   const dispatch = useDispatch();
 
   const computeInnerWindowSize = (): void => {
-
     dispatch(
       updateSizes({
         width: Number(window.innerWidth.toFixed(0)),

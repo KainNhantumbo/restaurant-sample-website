@@ -16,7 +16,7 @@ import { RiShareCircleLine } from 'react-icons/ri';
 export default function Home() {
   return (
     <Layout renderHeader renderFooter>
-      <main className='w-[100%] pt-[70px]'>
+      <main className='w-[100%] pt-[80px]'>
         <article className='w-[100%]'>
           <section className='w-[100%] max-w-[960px] mx-auto flex items-center justify-center p-4'>
             <div className='w-[100%] flex flex-col gap-4'>
@@ -182,10 +182,10 @@ export default function Home() {
                       style={{
                         position: 'relative',
                         left: index > 0 ? `-${index * 5}px` : '0',
-                        zIndex: index > 0 ? `${index}px` : `${index * 10}`
+                        zIndex: index > 0 ? `${index}` : `${0}`
                       }}
                       className={
-                        'base-image max-w-[35px] max-h-[35px] ring-white ring-2 border-solid border-white'
+                        'base-image max-w-[35px] max-h-[35px] ring-white ring-2 '
                       }
                     />
                   ))}

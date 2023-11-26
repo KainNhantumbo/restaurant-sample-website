@@ -23,6 +23,10 @@
     @apply rounded-[50%] object-cover w-[100%] h-[100%];
   }
 
+  .base-link {
+    @apply hover:text-primary_b text-center sm:text-left dark:hover:text-primary_b-dark transition-colors font-semibold;
+  }
+
   .base-corner-button {
     all: unset;
     @apply rounded-lg border-solid border-[1px] border-opacity-30 border-font-light dark:border-font-dark w-fit cursor-pointer place-content-center grid p-1;
@@ -43,7 +47,7 @@
   }
 
   .inputs {
-    @apply w-[100%] max-w-[200px] mobile:max-w-[260px] sm:max-w-md md:max-w-lg h-fit py-[10px] px-[18px] leading-7 outline-none resize-y rounded-full bg-background bg-opacity-70 border-solid border-[1px] border-opacity-50 border-font-light dark:border-font-dark text-font-light dark:text-font-dark focus:border-font-light focus:border-opacity-70 focus:transition-shadow focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] placeholder:text-[0.9rem] disabled:bg-foreground-light dark:disabled:bg-foreground-dark disabled:placeholder:text-transparent disabled:border-none;
+    @apply w-[100%] max-w-[200px] mobile:max-w-[260px] sm:max-w-md md:max-w-lg h-fit py-[10px] px-[18px] leading-7 outline-none resize-y rounded-xl bg-background bg-opacity-70 border-solid border-[1px] border-opacity-50 border-font-light dark:border-font-dark text-font-light dark:text-font-dark focus:border-font-light focus:border-opacity-70 focus:transition-shadow focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] placeholder:text-[0.9rem] disabled:bg-foreground-light dark:disabled:bg-foreground-dark disabled:placeholder:text-transparent disabled:border-none;
   }
 }
 

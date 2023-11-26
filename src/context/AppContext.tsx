@@ -1,7 +1,7 @@
 import ThemeContext from './ThemeContext';
 import { ReactNode, useEffect } from 'react';
-import { updateSizes } from '@/state/slices/innerWindowSizeSlice';
 import { useDispatch } from 'react-redux';
+import { updateSizes } from '@/state/slices/innerWindowSizeSlice';
 
 type Props = { children: ReactNode };
 

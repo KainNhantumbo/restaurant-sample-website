@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import { useState, useEffect } from 'react';
 import { m as motion, AnimatePresence } from 'framer-motion';
-import { _header as Container } from '../styles/modules/_header';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/state/store';

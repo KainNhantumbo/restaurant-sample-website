@@ -4,11 +4,11 @@ Hi, welcome. This this my first project using tailwindcss. I wanted to pratice t
 
 > **Live preview: [https://imeat-restaurant-demo.vercel.app](https://imeat-restaurant-demo.vercel.app)**
 
-**Preview screenshots:**
+📷 **Preview screenshots:**
 
 |            Mobile             |             Desktop             |
 | :---------------------------: | :-----------------------------: |
-| ![](./public/mobile-demo.png) | ![](./public//desktop-demo.png) |
+| ![](./public/mobile-demo.png) | ![](./public/desktop-demo.png) |
 
 ## 🐾 Project Stack
 
